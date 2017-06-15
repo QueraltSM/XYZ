@@ -1,4 +1,12 @@
 public class Main {
+    private static Gestora g = new Gestora();
+
+    public static Gestora getGestora(){
+        return g;
+    }
+
+
+
     public static void main(String[] args){
         PersonalSalarioFijo p1 = new PersonalSalarioFijo("569587A", "Javier Gómez", 2008);
 
@@ -14,8 +22,6 @@ public class Main {
         p4.setNombre("María Núñez");
         p4.setAñoIngreso(2013);
 
-        Gestora g = new Gestora();
-
         g.contrataPersonal(p1);
         p1.setSalario(1225.00);
 
@@ -28,6 +34,8 @@ public class Main {
         p3.setMontoCliente(7.90);
 
         g.contrataPersonal(p4);
-        p4.setSalario(1155.00);
+        p4.setSalario(1555435.00);
+
+        new GUI();
     }
 }

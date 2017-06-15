@@ -14,6 +14,29 @@ public class Gestora {
         return res;
     }
 
+    public List<PersonalComision> getPersonalComision() {
+        setOrden(getOrden());
+        Collections.sort(personal);
+
+        List<PersonalComision> res = new LinkedList<>();
+        for (Personal i : personal) {
+            if (i instanceof PersonalComision) res.add((PersonalComision) i);
+        }
+        return res;
+    }
+
+    public List<PersonalSalarioFijo> getPersonalSalarioFijo() {
+        setOrden(getOrden());
+        Collections.sort(personal);
+
+        List<PersonalSalarioFijo> res = new LinkedList<>();
+        for (Personal i : personal) {
+            if (i instanceof PersonalSalarioFijo) res.add((PersonalSalarioFijo) i);
+        }
+        return res;
+    }
+
+
     public static int getOrden(){
         return orden;
     }
